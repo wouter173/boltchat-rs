@@ -1,9 +1,20 @@
 use serde::{Deserialize, Serialize};
 
+use crate::utils::timestamp::get_timestamp;
+
 #[derive(Serialize, Deserialize, Debug)]
 pub struct EventMeta {
     pub t: String,
     pub c: u64,
+}
+
+impl EventMeta {
+	pub fn new(t: &str) -> Self {
+		EventMeta {
+			t: String::from(t),
+			c: get_timestamp()
+		}
+	}
 }
 
 #[derive(Serialize, Deserialize, Debug)]

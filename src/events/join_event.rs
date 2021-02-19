@@ -7,3 +7,14 @@ pub struct JoinEvent {
     pub e: EventMeta,
     pub user: User,
 }
+
+impl JoinEvent {
+    pub fn new(nick: &str) -> Self {
+        JoinEvent {
+            e: EventMeta::new("join"),
+            user: User {
+                nick: String::from(nick)
+            },
+        }
+    }
+}

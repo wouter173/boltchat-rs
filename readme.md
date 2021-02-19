@@ -25,8 +25,8 @@ every method and struct should be documented to make clear what everything does.
 - [ ] <b>event layer</b>
 - [ ] err event
 - [ ] join event
-- [ ] leave event
+- [x] leave event
 - [ ] msg event
-- [ ] event struct derive
+- [ ] event struct derive (ONLY FROM 0.2.0)
 - [ ] <b>client layer</b>
 - [ ]	client struct

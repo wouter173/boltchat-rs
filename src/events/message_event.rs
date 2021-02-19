@@ -4,14 +4,14 @@ use crate::utils::timestamp::get_timestamp;
 use super::event::{EventMeta, Msg, User};
 
 #[derive(Serialize, Deserialize, Debug)]
-pub struct MsgEvent {
+pub struct MessageEvent {
 	pub e: EventMeta,
 	pub msg: Msg,
 }
 
-impl MsgEvent {
-	pub fn new(nick: String, body: String) -> MsgEvent {
-		MsgEvent {
+impl MessageEvent {
+	pub fn new(nick: String, body: String) -> MessageEvent {
+		MessageEvent {
 			e: EventMeta {
 				t: String::from("msg"),
 				c: get_timestamp(),
