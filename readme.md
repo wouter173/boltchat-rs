@@ -1,5 +1,6 @@
 ## Bolt.rs
 <sup>the bolt rust library</sup>
+<sup>Supported Version: V0.1.0</sup>
 
 ### 🚧 Please note that the library is in extremely early developement. 🚧
 It litteraly does not work yet, I am still working on it.
@@ -18,15 +19,15 @@ every method and struct should be documented to make clear what everything does.
 ### TODO
 <sup>It is a lot</sup>
 
-- [ ] <b>stream layer</b>
-- [ ] stream manager
-- [ ] multithread the read stream
-- [ ] srv support
-- [ ] <b>event layer</b>
-- [ ] err event
-- [ ] join event
-- [x] leave event
-- [ ] msg event
-- [ ] event struct derive (ONLY FROM 0.2.0)
-- [ ] <b>client layer</b>
-- [ ]	client struct
+V0.1.0
+- [x] <b>stream layer</b>
+- [x]   stream manager
+- [ ]   multithread the read stream
+- [ ]   srv support
+- [x] <b>event layer</b>
+- [x]   err event
+- [x]   join event
+- [x]   leave event
+- [x]   msg event
+- [x] <b>client layer</b>
+- [x]	client struct
