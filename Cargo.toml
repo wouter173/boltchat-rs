@@ -6,7 +6,7 @@ edition = "2018"
 
 description = "Client library for bolt"
 readme = "readme.md"
-licese = "MIT"
+license = "MIT"
 keywords = ["bolt", "boltchat"]
 
 repository = "https://github.com/wouter173/bolt-rs"
