@@ -1,5 +1,5 @@
-use bolt::events::{Events};
-use bolt::client::{client::{Client, Options}};
+use boltchat::events::{Events};
+use boltchat::client::{client::{Client, Options}};
 
 fn main() {
     let options = Options {

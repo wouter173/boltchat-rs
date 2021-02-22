@@ -1,5 +1,5 @@
 [package]
-name = "bolt"
+name = "boltchat"
 version = "0.1.0"
 authors = ["Wouter de Bruijn <wouter@debruijn.dev>"]
 edition = "2018"
