@@ -28,7 +28,7 @@ impl Client {
 		}
 
 		//lmao this is shitass code.
-		stream.send(Events::serialise(
+		stream.send(Events::serialize(
 			Events::Join( JoinEvent::new(
 				options.nick.clone(),
 				keypair.armor_public_key(),
@@ -42,8 +42,8 @@ impl Client {
 		}
 	}
 
-	/// Recieve decoded events from the bolt server.
-	pub fn recieve(&mut self) -> Option<Events> {
+	/// Receive decoded events from the bolt server.
+	pub fn receive(&mut self) -> Option<Events> {
 		loop {
 			if let Some(json) = self.stream.recv_line() {
 				return Some(json);
@@ -54,7 +54,7 @@ impl Client {
 	/// Send a message to the bolt server.
 	pub fn send_message(&mut self, msg: String) {
 		let event = MessageEvent::new(self.options.nick.as_str().to_string(), msg.clone(), self.keypair.armor_message_signature(msg));
-		let json = Events::serialise(Events::Message(event)).unwrap();
+		let json = Events::serialize(Events::Message(event)).unwrap();
 		self.stream.send(json);
 	}
 }

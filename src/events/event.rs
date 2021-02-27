@@ -18,7 +18,7 @@ impl EventMeta {
 	}
 }
 
-/// User struct to de- serialise the user.
+/// User struct to de- serialize the user.
 /// Holds the users nick and pubkey.
 /// Used in the join and leave events.
 #[derive(Serialize, Deserialize, Debug)]
