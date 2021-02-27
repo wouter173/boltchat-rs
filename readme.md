@@ -1,7 +1,7 @@
 ## Boltchat-rs ⚡️
 <sup>the bolt rust library</sup>
 <sup>Supported Version: V0.2.0</sup><br>
-📦 [This is the boltchat crate]("https://crates.io/crates/boltchat")
+📦 This is the boltchat [crate](https://crates.io/crates/boltchat)
 
 ### 🚧 Please note that the library is in extremely early developement. 🚧
 It might be broken af, ion kno i aint used it yet. :shrugs:
