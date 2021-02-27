@@ -28,7 +28,7 @@ impl Stream {
 				panic!(e);
 			};
 
-			match Events::decode(buf) {
+			match Events::deserialise(buf) {
 				Ok(event) => return Some(event),
 				Err(err) => println!("{}", err),
 			}

@@ -18,21 +18,16 @@ impl EventMeta {
 	}
 }
 
-/// User struct to deserialise the user.
+/// User struct to de- serialise the user.
+/// Holds the users nick and pubkey.
+/// Used in the join and leave events.
 #[derive(Serialize, Deserialize, Debug)]
 pub struct User {
     pub nick: String,
+	pub pubkey: String,
 }
 
-/// Msg struct to deserialise the msg.
-#[derive(Serialize, Deserialize, Debug)]
-pub struct Msg {
-	pub sent: i16,
-	pub body: String,
-	pub user: User,
-}
-
-/// Event struct to template every event from.
+/// Event struct to decode all events from.
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Event {
 	pub e: EventMeta

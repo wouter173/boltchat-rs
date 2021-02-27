@@ -1,30 +1,31 @@
 use boltchat::events::{Events};
-use boltchat::client::{client::{Client, Options}};
+use boltchat::client::{options::Options, client::Client};
 
 fn main() {
     let options = Options {
         addr: String::from("127.0.0.1:3300"),
-        nick: String::from("bruhbot"),
+        nick: String::from("pingu"),
+        path: String::from("./secret.pgp")
     };
 
     let mut client: Client = Client::new(options);
-    
+
     loop {
         match client.recieve() {
             Some(Events::Error(event)) => {
-                println!("{:?}", event);
+                println!("error => {}", event.d.err);
             },
             Some(Events::Message(event)) => {
-                println!("{:?}", event);
-                if event.msg.body == String::from("!bruh") {
-                    client.send_message(String::from("agree"));
+                println!("message => [{}]: {}", event.d.msg.user.nick, event.d.msg.body);
+                if event.d.msg.body == String::from("!ping") {
+                    client.send_message(String::from("pong"));
                 }
             },
             Some(Events::Join(event)) => {
-                println!("{:?}", event);
+                println!("join => {}", event.d.user.nick);
             },
             Some(Events::Leave(event)) => {
-                println!("{:?}", event);
+                println!("leave => {}", event.d.user.nick);
             },
             None => {
 

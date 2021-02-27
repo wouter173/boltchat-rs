@@ -1,1 +1,4 @@
 /target
+*.pgp
+
+src/main.rs

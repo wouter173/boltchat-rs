@@ -10,7 +10,7 @@ pub mod leave_event;
 pub mod message_event;
 pub mod error_event;
 
-/// Events enum to decide which event should be encoded or decoded.
+/// Events enum to decide which event should be de- serialised.
 #[derive(Debug)]
 pub enum Events {
 	Join(JoinEvent),
@@ -20,8 +20,8 @@ pub enum Events {
 }
 
 impl Events {
-    /// This method decodes a raw event String into the Event it should be.
-    pub fn decode(raw: String) -> Result<Events, String> {
+    /// This method deserialises a raw event String into the Event it should be.
+    pub fn deserialise(raw: String) -> Result<Events, String> {
         
         let json: Event;
         match serde_json::from_str(&raw) {
@@ -52,8 +52,8 @@ impl Events {
         };
     }
 
-    /// This method encodes a Event into the String it should be.
-    pub fn encode(event: Events) -> Result<String, String> {
+    /// This method serialises an Event into the String it should be.
+    pub fn serialise(event: Events) -> Result<String, String> {
         match event {
             Events::Message(e) => {
                 Ok(serde_json::to_string(&e).unwrap())

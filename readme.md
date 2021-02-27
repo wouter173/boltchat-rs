@@ -19,15 +19,16 @@ every method and struct should be documented to make clear what everything does.
 ### TODO
 <sup>It is a lot</sup>
 
-V0.1.0
-- [x] <b>stream layer</b>
-- [x]   stream manager
-- [ ]   multithread the read stream
+V0.2.0
+- [ ] <b>stream layer</b>
+- [ ]   multithread the read stream (lmao im never gonna do this)
 - [ ]   srv support
-- [x] <b>event layer</b>
-- [x]   err event
-- [x]   join event
-- [x]   leave event
-- [x]   msg event
-- [x] <b>client layer</b>
-- [x]	client struct
+- [ ] <b>events layer</b>
+- [x]   fix the events to use pgp
+- [ ]   update the documentation
+- [x]   let every event use the d param (err and leave)
+- [ ]   fix the user 
+- [ ] <b>PGP</b>
+- [ ]   refactor the pgp keypair code
+- [ ] <b>General</b>
+- [ ]   fix all todo's

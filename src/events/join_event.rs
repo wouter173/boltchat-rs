@@ -1,22 +1,32 @@
 use serde::{Deserialize, Serialize};
 
 use super::event::{EventMeta, User};
+/// JoinData struct to de- serialise the data sent with the JoinEvent.
+#[derive(Serialize, Deserialize, Debug)]
+pub struct JoinData {
+    pub user: User,
+}
 
-/// Joinevent struct to encode and decode.
+/// Joinevent struct to de- serialise.
 #[derive(Serialize, Deserialize, Debug)]
 pub struct JoinEvent {
     pub e: EventMeta,
-    pub user: User,
+    pub d: JoinData,
 }
 
 impl JoinEvent {
     /// This is a library event that gets sent everytime you connect to a bolt.
-    pub fn new(nick: &str) -> Self {
+
+    //TODO make nick a String
+    pub fn new(nick: &str, pubkey: String) -> Self {
         JoinEvent {
             e: EventMeta::new("join"),
-            user: User {
-                nick: String::from(nick)
-            },
+            d: JoinData {
+                user: User {
+                    nick: String::from(nick),
+                    pubkey
+                },
+            }
         }
     }
 }
