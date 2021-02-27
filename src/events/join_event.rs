@@ -16,14 +16,12 @@ pub struct JoinEvent {
 
 impl JoinEvent {
     /// This is a library event that gets sent everytime you connect to a bolt.
-
-    //TODO make nick a String
-    pub fn new(nick: &str, pubkey: String) -> Self {
+    pub fn new(nick: String, pubkey: String) -> Self {
         JoinEvent {
             e: EventMeta::new("join"),
             d: JoinData {
                 user: User {
-                    nick: String::from(nick),
+                    nick,
                     pubkey
                 },
             }

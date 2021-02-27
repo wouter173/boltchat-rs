@@ -10,7 +10,7 @@ pub struct Stream {
 
 impl Stream {
 	/// This is a library method that is called to create a new Stream.
-    pub(crate) fn new(addr: &str) -> Self {
+    pub(crate) fn new(addr: String) -> Self {
 		Stream {
 			tcp_stream: TcpStream::connect(addr).unwrap(),
 		}

@@ -2,11 +2,11 @@ use boltchat::events::{Events};
 use boltchat::client::{options::Options, client::Client};
 
 fn main() {
-    let options = Options {
-        addr: String::from("127.0.0.1:3300"),
-        nick: String::from("pingu"),
-        path: String::from("./secret.pgp")
-    };
+    let options = Options::new(
+        String::from("127.0.0.1:3300"),
+        String::from("pingu"),
+        String::from("./secret.pgp")
+    );
 
     let mut client: Client = Client::new(options);
 

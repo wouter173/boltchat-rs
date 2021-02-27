@@ -2,10 +2,12 @@
 /// addr is the ipaddress or connection string to connect to.
 /// nick is the nickname the client has in a bolt server.
 /// path is the path to the pgp secret key storage file.
+/// password is the password with which to sign the secret key.
 pub struct Options {
 	pub addr: String,
 	pub nick: String, 
 	pub path: String,
+	pub password: String,
 }
 
 impl Options {
@@ -13,7 +15,8 @@ impl Options {
 		Options {
 			addr,
 			nick,
-			path
+			path,
+			password: String::from(""),
 		}
 	}
 }
