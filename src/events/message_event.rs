@@ -2,20 +2,20 @@ use serde::{Deserialize, Serialize};
 
 use super::event::{EventMeta,};
 
-/// User struct to de- serialise a message user.
+/// User struct to de- serialize a message user.
 #[derive(Serialize, Deserialize, Debug)]
 pub struct MessageUser {
 	pub nick: String,
 }
 
-/// Msg struct to de- serialise the msg.
+/// Msg struct to de- serialize the msg.
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Msg {
 	pub body: String,
 	pub sig: String,
 	pub user: MessageUser,
 }
-/// MessageData struct to de- serialise the data sent with the MessageEvent.
+/// MessageData struct to de- serialize the data sent with the MessageEvent.
 #[derive(Serialize, Deserialize, Debug)]
 pub struct MessageData {
 	pub msg: Msg,

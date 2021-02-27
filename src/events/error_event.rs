@@ -2,7 +2,7 @@ use super::event::{EventMeta};
 
 use serde::{Deserialize, Serialize};
 
-/// ErrorData struct to de- serialise the data sent with the ErrorEvent.
+/// ErrorData struct to de- serialize the data sent with the ErrorEvent.
 #[derive(Serialize, Deserialize, Debug)]
 pub struct ErrorData {
     pub err: String,

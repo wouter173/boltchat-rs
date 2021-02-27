@@ -11,7 +11,7 @@ fn main() {
     let mut client: Client = Client::new(options);
 
     loop {
-        match client.recieve() {
+        match client.receive() {
             Some(Events::Error(event)) => {
                 println!("error => {}", event.d.err);
             },

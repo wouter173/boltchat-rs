@@ -1,13 +1,13 @@
 use serde::{Deserialize, Serialize};
 
 use super::event::{EventMeta, User};
-/// JoinData struct to de- serialise the data sent with the JoinEvent.
+/// JoinData struct to de- serialize the data sent with the JoinEvent.
 #[derive(Serialize, Deserialize, Debug)]
 pub struct JoinData {
     pub user: User,
 }
 
-/// Joinevent struct to de- serialise.
+/// Joinevent struct to de- serialize.
 #[derive(Serialize, Deserialize, Debug)]
 pub struct JoinEvent {
     pub e: EventMeta,
