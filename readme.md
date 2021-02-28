@@ -1,7 +1,8 @@
 ## Boltchat-rs ⚡️
 <sup>the bolt rust library</sup>
 <sup>Supported Version: V0.2.0</sup><br>
-📦 This is the boltchat [crate](https://crates.io/crates/boltchat)
+📦 This is the boltchat [crate](https://crates.io/crates/boltchat)<br>
+📖 This is the boltchat [documentation](https://docs.rs/boltchat/)
 
 ### 🚧 Please note that the library is in extremely early developement. 🚧
 It might be broken af, ion kno i aint used it yet. :shrugs:
@@ -19,7 +20,7 @@ every method and struct should be documented to make clear what everything does.
 ### TODO
 <sup>It is still a lot</sup>
 
-V0.2.0
+V0.2.1
 - [ ] <b>stream layer</b>
 - [ ]   multithread the read stream (lmao im never gonna do this)
 - [ ]   srv support
