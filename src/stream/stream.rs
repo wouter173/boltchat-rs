@@ -4,7 +4,7 @@ use crate::{events::Events};
 
 /// Stream struct with a tcpstream.
 #[derive(Debug)]
-pub struct Stream {
+pub(crate) struct Stream {
 	tcp_stream: TcpStream,
 }
 

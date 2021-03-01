@@ -24,7 +24,7 @@ V0.2.2
 - [ ] <b>stream layer</b>
 - [ ]   multithread the read stream (lmao im never gonna do this)
 - [ ]   srv support
-- [ ]   make crate public
+- [x]   make crate public
 - [x] <b>client layer</b>
 - [x]   implement copy trait
 - [ ] <b>General</b>
