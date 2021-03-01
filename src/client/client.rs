@@ -5,6 +5,7 @@ use crate::{events::{Events, join_event::JoinEvent, message_event::MessageEvent}
 use super::options::Options;
 
 /// Client struct to construct a new client with.
+#[derive(Clone)]
 pub struct Client {
 	pub options: Options,
 	stream: Stream,

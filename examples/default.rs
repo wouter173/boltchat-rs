@@ -27,9 +27,7 @@ fn main() {
             Some(Events::Leave(event)) => {
                 println!("leave => {}", event.d.user.nick);
             },
-            None => {
-
-            }
+            None => {}
         }
     }
 }

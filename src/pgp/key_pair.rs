@@ -2,6 +2,7 @@ use std::{fs::{self, File}, io::Write};
 
 use pgp::{Deserializable, Message, SignedPublicKey, SignedSecretKey, composed::key::*, types::SecretKeyTrait};
 
+#[derive(Clone)]
 pub(crate) struct KeyPair {
     public_key: SignedPublicKey, 
     secret_key: SignedSecretKey

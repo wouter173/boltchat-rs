@@ -20,7 +20,7 @@ every method and struct should be documented to make clear what everything does.
 ### TODO
 <sup>It is still a lot</sup>
 
-V0.2.1
+V0.2.2
 - [ ] <b>stream layer</b>
 - [ ]   multithread the read stream (lmao im never gonna do this)
 - [ ]   srv support

@@ -3,6 +3,7 @@
 /// nick is the nickname the client has in a bolt server.
 /// path is the path to the pgp secret key storage file.
 /// password is the password with which to sign the secret key.
+#[derive(Clone)]
 pub struct Options {
 	pub addr: String,
 	pub nick: String, 

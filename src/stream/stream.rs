@@ -8,6 +8,14 @@ pub struct Stream {
 	tcp_stream: TcpStream,
 }
 
+impl Clone for Stream {
+    fn clone(&self) -> Self {
+        Stream {
+            tcp_stream: self.tcp_stream.try_clone().unwrap(),
+		}
+    }
+}
+
 impl Stream {
 	/// This is a library method that is called to create a new Stream.
     pub(crate) fn new(addr: String) -> Self {
