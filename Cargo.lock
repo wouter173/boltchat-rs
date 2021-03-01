@@ -116,15 +116,7 @@ dependencies = [
 
 [[package]]
 name = "boltchat"
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-version = "0.2.0"
-=======
 version = "0.2.2"
->>>>>>> Stashed changes
-=======
-version = "0.2.1"
->>>>>>> 5fc72c8... readme and version update
 dependencies = [
  "pgp",
  "serde",
