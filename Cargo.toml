@@ -1,6 +1,6 @@
 [package]
 name = "boltchat"
-version = "0.2.0"
+version = "0.2.2"
 authors = ["Wouter de Bruijn <wouter@debruijn.dev>"]
 edition = "2018"
 

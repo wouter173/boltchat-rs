@@ -23,13 +23,9 @@ V0.2.0
 - [ ] <b>stream layer</b>
 - [ ]   multithread the read stream (lmao im never gonna do this)
 - [ ]   srv support
-- [x] <b>events layer</b>
-- [x]   fix the events to use pgp
-- [x]   update the documentation
-- [x]   let every event use the d param (err and leave)
-- [x]   fix the user 
-- [x] <b>PGP</b>
-- [x]   refactor the pgp keypair code
+- [ ]   make crate public
+- [x] <b>client layer</b>
+- [x]   implement copy trait
 - [ ] <b>General</b>
 - [x]   fix all todo's
 - [ ]   actually learn about error handling instead of unwrapping litteraly everything
